@@ -2,9 +2,9 @@
 
 @if (session()->has('nome'))
     @section('conteudo')
-        >Inclusao do meu pagamento
+        <a href="{{ route('pagamento.aba') }}">Inclusao de pagamento</a>
         <br>
-        >Listagem do meu pagamento
+        Listagem dos meus pagamentos
     @endsection
 @else
     @section('conteudo')

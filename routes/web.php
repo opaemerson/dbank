@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CoreController;
+use App\Http\Controllers\PagamentoController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -10,10 +11,14 @@ Route::get('/minhaconta', [CoreController::class, 'minhaconta'])->name('site.min
 Route::get('/pagamentos', [CoreController::class, 'lista_pagamentos'])->name('site.pagamentos');
 Route::get('/cadastro', [CoreController::class, 'cadastro'])->name('site.cadastro');
 
-//Ações
+//Acoes
 Route::post('/criar', [CoreController::class, 'criarUsuario'])->name('processo.criarusuario');
 Route::post('/sair', [CoreController::class, 'sair'])->name('processo.sair');
 Route::post('/logar', [CoreController::class, 'logar'])->name('processo.logar');
+
+//Acoes referente ao pagamento
+Route::get('/aba_pagamento', [PagamentoController::class, 'abaPagamento'])->name('pagamento.aba');
+Route::post('/incluir_pagamento', [PagamentoController::class, 'incluirPagamento'])->name('pagamento.incluir');
 
 /*
 

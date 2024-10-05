@@ -9,5 +9,5 @@ class Usuario extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'senha'];
+    protected $fillable = ['nome', 'senha', 'saldo'];
 }
